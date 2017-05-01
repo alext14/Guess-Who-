@@ -111,6 +111,182 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: Animation Functions
+    
+    func animateImage() {
+        let bounds = self.firstImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.firstImage.bounds = CGRect(
+            x: self.firstImage.bounds.origin.x + shrinkValue,
+            y: self.firstImage.bounds.origin.y + shrinkValue, width: self.firstImage.bounds.size.width - shrinkValue, height: self.firstImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.firstImage.bounds = bounds }, completion: nil)
+    }
+    
+    func animateSecondImage() {
+        let bounds = self.secondImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.secondImage.bounds = CGRect(
+            x: self.secondImage.bounds.origin.x + shrinkValue,
+            y: self.secondImage.bounds.origin.y + shrinkValue, width: self.secondImage.bounds.size.width - shrinkValue, height: self.secondImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.secondImage.bounds = bounds }, completion: nil)
+    }
+    func animateThirdImage() {
+        let bounds = self.thirdImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.thirdImage.bounds = CGRect(
+            x: self.thirdImage.bounds.origin.x + shrinkValue,
+            y: self.thirdImage.bounds.origin.y + shrinkValue, width: self.thirdImage.bounds.size.width - shrinkValue, height: self.thirdImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.thirdImage.bounds = bounds }, completion: nil)
+    }
+    func animateFourthImage() {
+        let bounds = self.fourthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.fourthImage.bounds = CGRect(
+            x: self.fourthImage.bounds.origin.x + shrinkValue,
+            y: self.fourthImage.bounds.origin.y + shrinkValue, width: self.fourthImage.bounds.size.width - shrinkValue, height: self.fourthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.fourthImage.bounds = bounds }, completion: nil)
+    }
+    func animateFifthImage() {
+        let bounds = self.fifthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.fifthImage.bounds = CGRect(
+            x: self.fifthImage.bounds.origin.x + shrinkValue,
+            y: self.fifthImage.bounds.origin.y + shrinkValue, width: self.fifthImage.bounds.size.width - shrinkValue, height: self.fifthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.fifthImage.bounds = bounds }, completion: nil)
+    }
+    func animateSixthImage() {
+        let bounds = self.sixthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.sixthImage.bounds = CGRect(
+            x: self.sixthImage.bounds.origin.x + shrinkValue,
+            y: self.sixthImage.bounds.origin.y + shrinkValue, width: self.sixthImage.bounds.size.width - shrinkValue, height: self.sixthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.sixthImage.bounds = bounds }, completion: nil)
+    }
+    func animateSeventhImage() {
+        let bounds = self.seventhImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.seventhImage.bounds = CGRect(
+            x: self.seventhImage.bounds.origin.x + shrinkValue,
+            y: self.seventhImage.bounds.origin.y + shrinkValue, width: self.seventhImage.bounds.size.width - shrinkValue, height: self.seventhImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.seventhImage.bounds = bounds }, completion: nil)
+    }
+    func animateEighthImage() {
+        let bounds = self.eighthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.eighthImage.bounds = CGRect(
+            x: self.eighthImage.bounds.origin.x + shrinkValue,
+            y: self.eighthImage.bounds.origin.y + shrinkValue, width: self.eighthImage.bounds.size.width - shrinkValue, height: self.eighthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.eighthImage.bounds = bounds }, completion: nil)
+    }
+    func animateNinthImage() {
+        let bounds = self.ninthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.ninthImage.bounds = CGRect(
+            x: self.ninthImage.bounds.origin.x + shrinkValue,
+            y: self.ninthImage.bounds.origin.y + shrinkValue, width: self.ninthImage.bounds.size.width - shrinkValue, height: self.ninthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.ninthImage.bounds = bounds }, completion: nil)
+    }
+    func animateTenthImage() {
+        let bounds = self.tenthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.tenthImage.bounds = CGRect(
+            x: self.tenthImage.bounds.origin.x + shrinkValue,
+            y: self.tenthImage.bounds.origin.y + shrinkValue, width: self.tenthImage.bounds.size.width - shrinkValue, height: self.tenthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.tenthImage.bounds = bounds }, completion: nil)
+    }
+    func animateEleventhImage() {
+        let bounds = self.eleventhImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.eleventhImage.bounds = CGRect(
+            x: self.eleventhImage.bounds.origin.x + shrinkValue,
+            y: self.eleventhImage.bounds.origin.y + shrinkValue, width: self.eleventhImage.bounds.size.width - shrinkValue, height: self.eleventhImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.eleventhImage.bounds = bounds }, completion: nil)
+    }
+    func animateTwelfthImage() {
+        let bounds = self.twelfthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.twelfthImage.bounds = CGRect(
+            x: self.twelfthImage.bounds.origin.x + shrinkValue,
+            y: self.twelfthImage.bounds.origin.y + shrinkValue, width: self.twelfthImage.bounds.size.width - shrinkValue, height: self.twelfthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.twelfthImage.bounds = bounds }, completion: nil)
+    }
+    func animateThirteenthImage() {
+        let bounds = self.thirteenthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.twelfthImage.bounds = CGRect(
+            x: self.thirteenthImage.bounds.origin.x + shrinkValue,
+            y: self.thirteenthImage.bounds.origin.y + shrinkValue, width: self.thirteenthImage.bounds.size.width - shrinkValue, height: self.firstImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.thirteenthImage.bounds = bounds }, completion: nil)
+    }
+    func animateFourteenthImage() {
+        let bounds = self.fourteenthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.fourteenthImage.bounds = CGRect(
+            x: self.fourteenthImage.bounds.origin.x + shrinkValue,
+            y: self.fourteenthImage.bounds.origin.y + shrinkValue, width: self.fourteenthImage.bounds.size.width - shrinkValue, height: self.fourteenthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.fourteenthImage.bounds = bounds }, completion: nil)
+    }
+    func animateFifteenthImage() {
+        let bounds = self.fifteenthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.fifteenthImage.bounds = CGRect(
+            x: self.fifteenthImage.bounds.origin.x + shrinkValue,
+            y: self.fifteenthImage.bounds.origin.y + shrinkValue, width: self.fifteenthImage.bounds.size.width - shrinkValue, height: self.fifteenthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.fifteenthImage.bounds = bounds }, completion: nil)
+    }
+    func animateSixteenthImage() {
+        let bounds = self.sixteenthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.sixteenthImage.bounds = CGRect(
+            x: self.sixteenthImage.bounds.origin.x + shrinkValue,
+            y: self.sixteenthImage.bounds.origin.y + shrinkValue, width: self.sixteenthImage.bounds.size.width - shrinkValue, height: self.sixteenthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.sixteenthImage.bounds = bounds }, completion: nil)
+    }
+    func animateSeventeenthImage() {
+        let bounds = self.seventeenthImage.bounds
+        let shrinkValue: CGFloat = 20
+        
+        self.seventeenthImage.bounds = CGRect(
+            x: self.seventeenthImage.bounds.origin.x + shrinkValue,
+            y: self.seventeenthImage.bounds.origin.y + shrinkValue, width: self.seventeenthImage.bounds.size.width - shrinkValue, height: self.seventeenthImage.bounds.size.height - shrinkValue)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.seventeenthImage.bounds = bounds }, completion: nil)
+    }
+
+
+    
     // MARK: Input Validation Functions
     
     func validateInput(text: String) -> Bool {
@@ -272,7 +448,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    // MARK: Tap Resign and PlaySound Actions
+    // MARK: Tap Resign, PlaySound, Animate Actions
     
     
     @IBAction func scrollViewTapped(_ sender: UITapGestureRecognizer) {
@@ -297,54 +473,71 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func firstSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Dwight")
+        animateImage()
     }
     @IBAction func secondSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Edna")
+        animateSecondImage()
     }
     @IBAction func thirdSoundPressed(_ sender: UIButton) {
         playSound(soundName: "MrTurner")
+        animateThirdImage()
     }
     @IBAction func fourthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Mosby")
+        animateFourthImage()
     }
     @IBAction func fifthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "MichaelScott")
+        animateFifthImage()
     }
     @IBAction func sixthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Shrek")
+        animateSixthImage()
     }
     @IBAction func seventhSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Candace")
+        animateSeventhImage()
     }
     @IBAction func eighthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Patrick")
+        animateEighthImage()
     }
     @IBAction func ninthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Josh")
+        animateNinthImage()
     }
     @IBAction func tenthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "DannyPhantom")
+        animateTenthImage()
     }
     @IBAction func eleventhSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Creed")
+        animateEleventhImage()
     }
     @IBAction func twelfthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "AustinPowers")
+        animateTwelfthImage()
     }
     @IBAction func thirteenthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Donkey")
+        animateThirteenthImage()
     }
     @IBAction func fourteenthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Squidward")
+        animateFourteenthImage()
     }
     @IBAction func fifteenthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Kevin")
+        animateFifteenthImage()
     }
     @IBAction func sixteenthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Spongebob")
+        animateSixteenthImage()
     }
     @IBAction func seventeenthSoundPressed(_ sender: UIButton) {
         playSound(soundName: "Stanley")
+        animateSeventeenthImage()
     }
     
     // MARK: Text Detection and Input Validation Actions
@@ -518,7 +711,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             seventeenthLabel.text = ""
         }
     }
-    
     
     
 
