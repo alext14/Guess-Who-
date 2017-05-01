@@ -68,12 +68,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var fifteenthImage: UIButton!
     @IBOutlet weak var sixteenthImage: UIButton!
     @IBOutlet weak var seventeenthImage: UIButton!
+    @IBOutlet weak var finishButton: UIButton!
     
     // MARK: View and Sound Functions
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        finishButton.isHidden = true
         scrollView.contentSize = CGSize(width: 0, height: 1670)
         firstText.delegate = self
         secondText.delegate = self
@@ -96,6 +98,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
     }
     
+    func checkButton() {
+    if firstLabel.text == "CORRECT!!!" && secondLabel.text == "CORRECT!!!" && thirdLabel.text == "CORRECT!!!" && fourthLabel.text == "CORRECT!!!" && fifthLabel.text == "CORRECT!!!" && sixthLabel.text == "CORRECT!!!" && seventhLabel.text == "CORRECT!!!" && eighthLabel.text == "CORRECT!!!" && ninthLabel.text == "CORRECT!!!" && tenthLabel.text == "CORRECT!!!" && eleventhLabel.text == "CORRECT!!!" && twelfthLabel.text == "CORRECT!!!" && thirteenthLabel.text == "CORRECT!!!" && fourteenthLabel.text == "CORRECT!!!" && fifteenthLabel.text == "CORRECT!!!" && sixteenthLabel.text == "CORRECT!!!" && seventeenthLabel.text == "CORRECT!!!" {
+        finishButton.isHidden = false
+    } else {
+        finishButton.isHidden = true
+        }
+    }
     
     
     func playSound(soundName: String) {
@@ -238,9 +247,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let bounds = self.thirteenthImage.bounds
         let shrinkValue: CGFloat = 20
         
-        self.twelfthImage.bounds = CGRect(
+        self.thirteenthImage.bounds = CGRect(
             x: self.thirteenthImage.bounds.origin.x + shrinkValue,
-            y: self.thirteenthImage.bounds.origin.y + shrinkValue, width: self.thirteenthImage.bounds.size.width - shrinkValue, height: self.firstImage.bounds.size.height - shrinkValue)
+            y: self.thirteenthImage.bounds.origin.y + shrinkValue, width: self.thirteenthImage.bounds.size.width - shrinkValue, height: self.thirteenthImage.bounds.size.height - shrinkValue)
         
         UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: { self.thirteenthImage.bounds = bounds }, completion: nil)
     }
@@ -547,6 +556,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateInput(text: firstText.text!) {
             firstImage.setImage(UIImage(named: "dwightShrute"), for: .normal)
             firstLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             firstImage.setImage(UIImage(named: "questionMark"), for: .normal)
             firstLabel.text = ""
@@ -556,6 +566,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateSecondInput(text: secondText.text!) {
             secondImage.setImage(UIImage(named: "ednaFromIncredibles"), for: .normal)
             secondLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             secondImage.setImage(UIImage(named: "questionMark"), for: .normal)
             secondLabel.text = ""
@@ -566,6 +577,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateThirdInput(text: thirdText.text!) {
             thirdImage.setImage(UIImage(named: "TimmysDad"), for: .normal)
             thirdLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             thirdImage.setImage(UIImage(named: "questionMark"), for: .normal)
             thirdLabel.text = ""
@@ -576,6 +588,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateFourthInput(text: fourthText.text!) {
             fourthImage.setImage(UIImage(named: "mosby"), for: .normal)
             fourthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             fourthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             fourthLabel.text = ""
@@ -586,6 +599,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateFifthInput(text: fifthText.text!) {
             fifthImage.setImage(UIImage(named: "mikescott"), for: .normal)
             fifthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             fifthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             fifthLabel.text = ""
@@ -596,6 +610,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateSixthInput(text: sixthText.text!) {
             sixthImage.setImage(UIImage(named: "shrek"), for: .normal)
             sixthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             sixthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             sixthLabel.text = ""
@@ -606,6 +621,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateSeventhInput(text: seventhText.text!) {
             seventhImage.setImage(UIImage(named: "candaceFromPhineas"), for: .normal)
             seventhLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             seventhImage.setImage(UIImage(named: "questionMark"), for: .normal)
             seventhLabel.text = ""
@@ -616,6 +632,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateEighthInput(text: eighthText.text!) {
             eighthImage.setImage(UIImage(named: "patrickStar"), for: .normal)
             eighthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             eighthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             eighthLabel.text = ""
@@ -626,6 +643,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateNinthInput(text: ninthText.text!) {
             ninthImage.setImage(UIImage(named: "joshFromDrakeAndJosh"), for: .normal)
             ninthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             ninthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             ninthLabel.text = ""
@@ -636,6 +654,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateTenthInput(text: tenthText.text!) {
             tenthImage.setImage(UIImage(named: "dannyPhantom"), for: .normal)
             tenthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             tenthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             tenthLabel.text = ""
@@ -646,6 +665,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateEleventhInput(text: eleventhText.text!) {
             eleventhImage.setImage(UIImage(named: "creed"), for: .normal)
             eleventhLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             eleventhImage.setImage(UIImage(named: "questionMark"), for: .normal)
             eleventhLabel.text = ""
@@ -656,6 +676,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateTwelfthInput(text: twelfthText.text!) {
             twelfthImage.setImage(UIImage(named: "austinPowers"), for: .normal)
             twelfthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             twelfthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             twelfthLabel.text = ""
@@ -666,6 +687,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateThirteenthInput(text: thirteenthText.text!) {
             thirteenthImage.setImage(UIImage(named: "donkeyfromshrek"), for: .normal)
             thirteenthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             thirteenthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             thirteenthLabel.text = ""
@@ -676,6 +698,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateFourteenthInput(text: fourteenthText.text!) {
             fourteenthImage.setImage(UIImage(named: "squidward"), for: .normal)
             fourteenthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             fourteenthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             fourteenthLabel.text = ""
@@ -686,6 +709,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateFifteenthInput(text: fifteenthText.text!) {
             fifteenthImage.setImage(UIImage(named: "kevinMalone"), for: .normal)
             fifteenthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             fifteenthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             fifteenthLabel.text = ""
@@ -696,6 +720,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateSixteenthInput(text: sixteenthText.text!) {
             sixteenthImage.setImage(UIImage(named: "spongebob"), for: .normal)
             sixteenthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             sixteenthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             sixteenthLabel.text = ""
@@ -706,6 +731,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if validateSeventeenthInput(text: seventeenthText.text!) {
             seventeenthImage.setImage(UIImage(named: "stanleyHudson"), for: .normal)
             seventeenthLabel.text = "CORRECT!!!"
+            checkButton()
         } else {
             seventeenthImage.setImage(UIImage(named: "questionMark"), for: .normal)
             seventeenthLabel.text = ""

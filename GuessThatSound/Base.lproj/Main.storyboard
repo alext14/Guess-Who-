@@ -451,6 +451,13 @@
                                         <color key="textColor" red="0.10724340215696704" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess Who!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rt-d5-FUv">
+                                        <rect key="frame" x="81" y="23" width="213" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <color key="textColor" red="1" green="0.2298673365689512" blue="0.12540573968006063" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap a Question Mark to begin!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYe-VL-6qW">
                                         <rect key="frame" x="67" y="65" width="241" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -465,13 +472,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess Who!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rt-d5-FUv">
-                                        <rect key="frame" x="81" y="23" width="213" height="41"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ei-5M-cVK">
+                                        <rect key="frame" x="315" y="28" width="52" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                        <color key="textColor" red="1" green="0.2298673365689512" blue="0.12540573968006063" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="FINISH!"/>
+                                        <connections>
+                                            <segue destination="n3W-rR-Cjn" kind="presentation" id="iEP-lr-VjN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9760972798957761" green="1" blue="0.0" alpha="0.6407596982758621" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -495,6 +503,7 @@
                         <outlet property="fifthImage" destination="LHB-R0-ZGG" id="xG4-4n-CDP"/>
                         <outlet property="fifthLabel" destination="qs9-2q-bmF" id="AkQ-6Q-LVk"/>
                         <outlet property="fifthText" destination="K4Q-z4-qfh" id="B0X-JU-lgR"/>
+                        <outlet property="finishButton" destination="2ei-5M-cVK" id="T6Z-pT-vve"/>
                         <outlet property="firstImage" destination="03I-ve-lsK" id="xYr-zF-10h"/>
                         <outlet property="firstLabel" destination="F6A-nZ-Rt5" id="xdI-OP-T0f"/>
                         <outlet property="firstText" destination="wAV-tm-uZQ" id="iQr-wh-8C6"/>
@@ -544,7 +553,47 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="6.746626686656672"/>
+            <point key="canvasLocation" x="-183" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="k3N-xj-HLm">
+            <objects>
+                <viewController id="n3W-rR-Cjn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0cA-hq-kqD"/>
+                        <viewControllerLayoutGuide type="bottom" id="GQR-gs-eqB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BD3-mj-3gJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgx-qM-m2l">
+                                <rect key="frame" x="67" y="92" width="240" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Congratulations! You identified all 17 sounds! You are now entitled to obnoxiously high amounts of bragging rights to levy against your friends! Happy Birthday! Press the button below to return to the game.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-n1-BSX">
+                                <rect key="frame" x="153" y="375" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21756377260000001" green="0.34512062100000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Return">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Z0E-S9-2wp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.30857398580000001" blue="0.1925001153" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVd-sT-STC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="76"/>
         </scene>
     </scenes>
     <resources>
